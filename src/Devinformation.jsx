@@ -76,7 +76,7 @@ const DevIn = () => {
         </div>
       </div>
       {show && (
-        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 px-2 sm:px-0">
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 px-2 sm:px-0 rounded-3xl">
           <div className="bg-white rounded-2xl p-4 sm:p-8 shadow-2xl flex flex-col items-center w-full max-w-xs sm:max-w-md animate-fade-in">
             <h2 className="text-lg sm:text-2xl font-bold mb-2 text-center text-green-700 tracking-wide">DEVELOPER INFORMATION</h2>
             <div className="w-full flex flex-col gap-2 mb-4">
