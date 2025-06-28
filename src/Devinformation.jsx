@@ -63,25 +63,50 @@ const DevIn = () => {
     <>
       <div>
         <div>
-          <h3 onClick={() => setShow(true)} className="text-black"><u className="cursor-pointer">Developer Information</u></h3>
+          <h3>
+            <u
+              onClick={() => setShow(true)}
+              className="cursor-pointer text-black transition-all duration-300 hover:text-green-700 hover:underline hover:underline-offset-4 focus:outline-none focus:ring-2 focus:ring-green-400 px-1 rounded"
+              tabIndex={0}
+              onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setShow(true); }}
+            >
+              Developer Information
+            </u>
+          </h3>
         </div>
       </div>
       {show && (
-        <div className="fixed inset-0 bg-black/30 rounded-3xl flex items-center justify-center z-50">
-          <div className="bg-white rounded-2xl p-8 shadow-xl flex flex-col items-center  w-[85%]">
-            <h2 className="text-2xl font-bold mb-2 text-center text-green-700">DEVELOPER INFORMATION</h2>
-
-            {items.map((item, index) => (<div key={index}><p className="text-gray-700 mb-2">{item.title} <span className="text-green-700">{item.name}</span> <span> <span>{item.age_text_1}</span> <span className="text-green-700">{item.age}</span> <span>{item.age_text_2}</span></span></p></div>))}
-
-
-
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 px-2 sm:px-0">
+          <div className="bg-white rounded-2xl p-4 sm:p-8 shadow-2xl flex flex-col items-center w-full max-w-xs sm:max-w-md animate-fade-in">
+            <h2 className="text-lg sm:text-2xl font-bold mb-2 text-center text-green-700 tracking-wide">DEVELOPER INFORMATION</h2>
+            <div className="w-full flex flex-col gap-2 mb-4">
+              {items.map((item, index) => (
+                <div key={index}>
+                  <p className="text-gray-700 text-sm sm:text-base text-start">
+                    {item.title} <span className="text-green-700 font-semibold">{item.name}</span>
+                    {item.age && (
+                      <span> <span>{item.age_text_1}</span> <span className="text-green-700 font-semibold">{item.age}</span> <span>{item.age_text_2}</span></span>
+                    )}
+                  </p>
+                </div>
+              ))}
+            </div>
             <button
-              className="px-6 py-2 rounded-full bg-green-500 text-white font-bold hover:bg-green-600 transition-all"
+              className="px-4 sm:px-6 py-2 rounded-full bg-green-500 text-white font-bold shadow hover:bg-green-600 hover:scale-105 hover:shadow-green-200/40 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400 active:scale-95"
               onClick={() => setShow(false)}
             >
               Close
             </button>
           </div>
+          <style>{`
+            .animate-fade-in {
+              animation: fadeIn 0.4s cubic-bezier(0.4,0,0.2,1);
+            }
+            @keyframes fadeIn {
+              from { opacity: 0; transform: scale(0.96); }
+              to { opacity: 1; transform: scale(1); }
+            }
+          `}</style>
         </div>
       )}
     </>
