@@ -52,7 +52,10 @@ const DevIn = () => {
     {
       title: "The age of",
       name: "Abdul Raffay",
-      age: `is ${currentAge} Years Old`
+      age_text_1: "is",
+      age: `${currentAge}`,
+      age_text_2: "Years Old",
+
     },
   ]
 
@@ -68,7 +71,7 @@ const DevIn = () => {
           <div className="bg-white rounded-2xl p-8 shadow-xl flex flex-col items-center  w-[85%]">
             <h2 className="text-2xl font-bold mb-2 text-center text-green-700">DEVELOPER INFORMATION</h2>
 
-            {items.map((item, index) => (<div key={index}><p className="text-gray-700 mb-2">{item.title} <span className="text-green-700">{item.name}</span> <span>{item.age}</span></p></div>))}
+            {items.map((item, index) => (<div key={index}><p className="text-gray-700 mb-2">{item.title} <span className="text-green-700">{item.name}</span> <span> <span>{item.age_text_1}</span> <span className="text-green-700">{item.age}</span> <span>{item.age_text_2}</span></span></p></div>))}
 
 
 

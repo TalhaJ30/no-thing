@@ -10,7 +10,7 @@ function App() {
         <h1 className="text-6xl font-normal text-white drop-shadow-lg mb-2 animate-bounce">Nothing</h1>
         <p className="text-white/80 text-lg mb-4 italic">Welcome to the most unuseful app ever made.</p>
         <button
-          className="px-8 py-3 rounded-full bg-white/20 text-white font-bold shadow hover:bg-white/30 transition-all duration-300 outline-none focus:ring-2 focus:ring-pink-400"
+          className="px-8 py-3 rounded-full bg-white/20 text-white font-normal shadow hover:bg-white/30 transition-all duration-300 outline-none focus:ring-2 focus:ring-pink-400"
           onClick={() => setShowModal(true)}
         >
           Do Nothing
@@ -27,11 +27,11 @@ function App() {
             disabled
           />
         </div>
-        <div className="flex gap-4 mt-4">
-          <button className="px-4 py-2 rounded-lg bg-pink-400/30 text-white font-semibold shadow hover:bg-pink-400/50 transition-all duration-300 cursor-not-allowed" disabled>
+        <div className="flex gap-4 mt-4 flex-wrap justify-center items-center">
+          <button className="px-4 py-2 rounded-lg bg-pink-400/30 text-white font-normal shadow hover:bg-pink-400/50 transition-all duration-300 cursor-not-allowed" disabled>
             Pointless
           </button>
-          <button className="px-4 py-2 rounded-lg bg-yellow-400/30 text-white font-semibold shadow hover:bg-yellow-400/50 transition-all duration-300 cursor-not-allowed" disabled>
+          <button className="px-4 py-2 rounded-lg bg-yellow-400/30 text-white font-normal shadow hover:bg-yellow-400/50 transition-all duration-300 cursor-not-allowed" disabled>
             Meaningless
           </button>
         </div>
