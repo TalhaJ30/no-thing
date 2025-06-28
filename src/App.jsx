@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-tr from-purple-800 via-pink-500 to-yellow-400 animate-gradient-x">
-      <div className="backdrop-blur-md bg-white/10 border border-white/30 rounded-3xl shadow-2xl p-12 flex flex-col items-center gap-8 max-w-md">
+      <div className="backdrop-blur-md bg-white/10 border border-white/30 rounded-3xl shadow-2xl p-12 flex flex-col items-center gap-8 max-w-md ml-2.5 mr-2.5">
         <h1 className="text-6xl font-extrabold text-white drop-shadow-lg mb-2 animate-bounce">Nothing</h1>
         <p className="text-white/80 text-lg mb-4 italic">Welcome to the most unuseful app ever made.</p>
         <button
